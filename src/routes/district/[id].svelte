@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { xlink_attr } from 'svelte/internal';
 	export let district;
 	var map;
 	var zoom = 15;
@@ -44,6 +43,6 @@
 <style>
 	#mapDiv {
 		width: 100%;
-		height: 720px;
+		height: 480px;
 	}
 </style>
