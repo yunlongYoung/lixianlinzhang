@@ -13,7 +13,7 @@
 <svelte:head>
 	<script
 		type="text/javascript"
-		src="http://api.tianditu.gov.cn/api?v=4.0&tk=d999b17e082a319d7892134e07b054af"></script>
+		src="http://api.tianditu.gov.cn/api?v=4.0&tk=893b1b6100bd7038f11c99e58227aaf2"></script>
 </svelte:head>
 
 <h1>{district.name}</h1>
