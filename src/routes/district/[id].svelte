@@ -3,4 +3,6 @@
     export let district;
 </script>
 
-<h1>{district}</h1>
+<h1>{district.name}</h1>
+
+<h2>{district.id}</h2>

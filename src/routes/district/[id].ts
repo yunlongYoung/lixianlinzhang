@@ -1,7 +1,9 @@
+import { districts } from "$lib/district";
+
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get({ params }) {
-    
-    let district = params.id
+
+    const district = { "id": params.id, "name": districts[params.id] };
 
     if (params) {
         return { body: { district } }
