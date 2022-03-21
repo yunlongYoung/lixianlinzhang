@@ -3,10 +3,27 @@
 	export let district;
 	var map;
 	var zoom = 15;
+	var lay;
+	var onlyMapLay;
 	onMount(async () => {
-		map = new T.Map('mapDiv');
+		var imageURL =
+			'http://t0.tianditu.gov.cn/img_w/wmts?' +
+			'SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles' +
+			'&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=d999b17e082a319d7892134e07b054af';
+		// var imageURL =
+		// 	'http://t0.tianditu.gov.cn/img_w/wmts?' +
+		// 	'SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles' +
+		// 	'&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=d999b17e082a319d7892134e07b054af';
+		//创建自定义图层对象
+		lay = new T.TileLayer(imageURL, { minZoom: 13, maxZoom: 18 });
+		var config = { layers: [lay] };
+		//初始化地图对象
+		map = new T.Map('mapDiv', config);
+		//设置显示地图的中心点和级别
 		let [x, y] = district.center.split(',');
 		map.centerAndZoom(new T.LngLat(x, y), zoom);
+		//允许鼠标滚轮缩放地图
+		map.enableScrollWheelZoom();
 	});
 </script>
 
@@ -22,6 +39,6 @@
 <style>
 	#mapDiv {
 		width: 100%;
-		height: 480px;
+		height: 400px;
 	}
 </style>
