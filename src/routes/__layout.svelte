@@ -33,12 +33,6 @@
 </main>
 
 <style>
-	.custom-restricted-width {
-		/* To limit the menu width to the content of the menu: */
-		display: inline-block;
-		/* Or set the width explicitly: */
-		/* width: 10em; */
-	}
 	main {
 		max-width: 768px;
 		display: flex;
