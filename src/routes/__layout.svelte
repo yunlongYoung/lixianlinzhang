@@ -13,16 +13,16 @@
 		<a href="/" class="pure-menu-heading pure-menu-link"><b>首页</b></a>
 		<ul class="pure-menu-list">
 			<li class="pure-menu-item">
-				<a href="/news" class="pure-menu-link">动态</a>
+			<a href="/plan" class="pure-menu-link">规划</a>
 			</li>
 			<li class="pure-menu-item">
-			<a href="/policy" class="pure-menu-link">政策</a>
+				<a href="/news" class="pure-menu-link">动态</a>
 			</li>
 			<li class="pure-menu-item">
 			<a href="/district" class="pure-menu-link">机构</a>
 			</li>
 			<li class="pure-menu-item">
-			<a href="/plan" class="pure-menu-link">规划</a>
+			<a href="/policy" class="pure-menu-link">政策</a>
 			</li>
 		</ul>
 	</div>
